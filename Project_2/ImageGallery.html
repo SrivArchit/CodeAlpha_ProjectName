@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="ImageGallery.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="filter-btns">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('boy')">Boy</button>
+    <button onclick="filterGallery('girl')">Girl</button>
+    <button onclick="filterGallery('cars')">Cars</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('bikes')">Bikes</button>
+  </div>
+
+  <div class="gallery">
+    <img src="images/boy1.jpg" alt="Boy" data-category="boy" onclick="openLightbox(this)">
+    <img src="images/boy2.jpg" alt="Boy" data-category="boy" onclick="openLightbox(this)">
+    <img src="images/girl1.jpg" alt="Girl" data-category="girl" onclick="openLightbox(this)">
+    <img src="images/girl2.webp" alt="Girl" data-category="girl" onclick="openLightbox(this)">
+    <img src="images/car1.jpg" alt="Cars" data-category="cars" onclick="openLightbox(this)">
+    <img src="images/car2.jpg" alt="Cars" data-category="cars" onclick="openLightbox(this)">
+    <img src="images/nature1.jpg" alt="Nature" data-category="nature" onclick="openLightbox(this)">
+    <img src="images/nature2.webp" alt="Nature" data-category="nature" onclick="openLightbox(this)">
+    <img src="images/bike1.webp" alt="Bikes" data-category="bikes" onclick="openLightbox(this)">
+    <img src="images/bike2.webp" alt="Bikes" data-category="bikes" onclick="openLightbox(this)">
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" />
+    <div class="nav">
+      <span onclick="prevImage()">&#10094;</span>
+      <span onclick="nextImage()">&#10095;</span>
+    </div>
+  </div>
+
+  <script src="ImageGallery.js"></script>
+</body>
+</html>
